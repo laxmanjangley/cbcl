@@ -13,9 +13,9 @@ typedef struct Instance_t{
 } InstanceWrapper;
 
 typedef struct {
-  InstanceWrapper* (* const init)(ConnStr cstr);
-  void (* const begin)(InstanceWrapper *iw);
-  void (* const end)(InstanceWrapper *iw);
+	InstanceWrapper* (* const init)(ConnStr cstr);
+	void (* const begin)(InstanceWrapper *iw);
+	void (* const end)(InstanceWrapper *iw);
 } _Wrapper;
 
 
