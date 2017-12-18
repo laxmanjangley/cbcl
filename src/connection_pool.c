@@ -14,6 +14,7 @@ ConnectionPool *create_pool(){
 	pool = malloc(sizeof(ConnectionPool));
 	// pool->handle = malloc(sizeof(Node));
 	pool->handle = create();
+	pool->cstr = {"couchbase://localhost:8091/nlp"}
 	pool->current_connections = 0;
 	int i;
 	for(i=0;i<INITIAL_CONNECTIONS;i++){

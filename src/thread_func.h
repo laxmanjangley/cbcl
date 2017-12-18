@@ -8,14 +8,16 @@ typedef struct Thread_t{
 	unsigned int opcount;
 } Thread;
 
-typedef struct Init_t{
-	const char** input;
+typedef struct Param_t{
+	const char** key;
+	const char** value;
 	unsigned int size;
-} Init;
+	Thread *thread;
+} Param;
 
 typedef struct {
 	Thread* (*void init_thread)(int oc, ConnectionPool *pool);
-	void (*void run)(Init *param);
+	void (*void run)(Param *param);
 } _Func;
 
 extern _Func const Func;
